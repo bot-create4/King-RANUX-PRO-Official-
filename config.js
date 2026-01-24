@@ -7,7 +7,7 @@
 module.exports = {
 
   // 🔐 WhatsApp Session ID (MEGA or base64)
-  SESSION_ID: process.env.SESSION_ID || "",
+  SESSION_ID: process.env.SESSION_ID || "b2YFnKbQ#opEiQaq73huoNZ4iDh2USHfalWwEXdc28owzWLL6MfE",
 
   // ===============================
   // 🤖 BOT MODE SYSTEM
@@ -30,7 +30,7 @@ module.exports = {
   // 🛡️ ANTI DELETE SYSTEM
   // (DEFAULT: OFF)
   // ===============================
-  ANTI_DELETE: false,
+  ANTI_DELETE: true,
 
   // ===============================
   // ⚙️ GENERAL SETTINGS
