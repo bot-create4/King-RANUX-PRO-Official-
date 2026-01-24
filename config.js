@@ -1,6 +1,6 @@
 /**
  * 👑 King RANUX PRO – Configuration File
- * User Editable Area (Core Safe)
+ * User Editable Area 
  * Only this file users are allowed to edit
  */
 
