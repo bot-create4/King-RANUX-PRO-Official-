@@ -1,0 +1,11 @@
+{
+  "name": "king-ranux-user",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "simple-git": "^3.30.0"
+  }
+}
