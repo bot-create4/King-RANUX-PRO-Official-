@@ -22,9 +22,9 @@ module.exports = {
   // 📌 STATUS AUTOMATION SYSTEM
   // (DEFAULT: OFF)
   // ===============================
-  AUTO_STATUS_SEEN: false,
+  AUTO_STATUS_SEEN: true,
   AUTO_STATUS_REACT: false,
-  AUTO_STATUS_FORWARD: false,
+  AUTO_STATUS_FORWARD: true,
 
   // ===============================
   // 🛡️ ANTI DELETE SYSTEM
@@ -35,7 +35,7 @@ module.exports = {
   // ===============================
   // ⚙️ GENERAL SETTINGS
   // ===============================
-  PREFIX: process.env.PREFIX || ".",
+  PREFIX: process.env.PREFIX || ",",
 
   // ===============================
   // 🖼️ BRANDING / UI
