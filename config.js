@@ -24,7 +24,7 @@ module.exports = {
   // ===============================
   AUTO_STATUS_SEEN: true,
   AUTO_STATUS_REACT: false,
-  AUTO_STATUS_FORWARD: true,
+  AUTO_STATUS_FORWARD: false,
 
   // ===============================
   // 🛡️ ANTI DELETE SYSTEM
