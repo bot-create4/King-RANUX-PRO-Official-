@@ -1,12 +1,12 @@
 /**
- * 👑 King RANUX PRO – Configuration File
- * User Editable Area 
- * Only this file users are allowed to edit
+ * 👑 King RANUX PRO – User Configuration
+ * Users are allowed to edit ONLY this file
  */
 
 module.exports = {
 
-  // 🔐 WhatsApp Session ID (MEGA or base64)
+  // 🔐 WhatsApp Session ID
+  // (MEGA file id or base64 session)
   SESSION_ID: process.env.SESSION_ID || "b2YFnKbQ#opEiQaq73huoNZ4iDh2USHfalWwEXdc28owzWLL6MfE",
 
   // ===============================
@@ -19,33 +19,34 @@ module.exports = {
   MODE: process.env.MODE || "public",
 
   // ===============================
-  // 📌 STATUS AUTOMATION SYSTEM
-  // (DEFAULT: OFF)
+  // 📌 STATUS AUTOMATION
   // ===============================
   AUTO_STATUS_SEEN: true,
   AUTO_STATUS_REACT: false,
   AUTO_STATUS_FORWARD: false,
 
   // ===============================
-  // 🛡️ ANTI DELETE SYSTEM
-  // (DEFAULT: OFF)
+  // 🛡️ ANTI DELETE
   // ===============================
   ANTI_DELETE: true,
 
   // ===============================
-  // ⚙️ GENERAL SETTINGS
+  // ⚙️ GENERAL
   // ===============================
-  PREFIX: process.env.PREFIX || ",",
+  PREFIX: process.env.PREFIX || ".",
 
   // ===============================
-  // 🖼️ BRANDING / UI
+  // 🎬 MOVIE PLUGIN FOOTER
+  // ===============================
+  MOVIE_FOOTER_TEXT: "𝓜𝓡. 𝓡𝓪𝓷𝓼𝓪𝓻𝓪 𝓓𝓮𝓿𝓷𝓪𝓽𝓱",
+
+  // ===============================
+  // 🖼️ ALIVE UI
   // ===============================
   ALIVE_IMG:
     process.env.ALIVE_IMG ||
     "https://raw.githubusercontent.com/ransara-devnath-ofc/-Bot-Accent-/refs/heads/main/King%20RANUX%20PRO%20Bot%20Images/king-ranux-pro-main-logo.png",
 
-  // Alive Message Template
-  // Used in alive.js plugin
   ALIVE_MSG: `
 👑 𝐊𝐢𝐧𝐠 𝐑𝐀𝐍𝐔𝐗 ᴾʳᵒ
 ━━━━━━━━━━━━━━━━━━━━━━
@@ -63,7 +64,6 @@ module.exports = {
 💾 RAM Usage : {RAM}
 
 ━━━━━━━━━━━━━━━━━━━━━━
-🛡️ Security  : Session Verified
 📡 Connection: WhatsApp Multi-Device
 ⚙️ Mode      : {MODE}
 
