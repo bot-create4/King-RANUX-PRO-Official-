@@ -7,7 +7,7 @@ module.exports = {
 
   // 🔐 WhatsApp Session ID
   // (MEGA file id or base64 session)
-  SESSION_ID: process.env.SESSION_ID || "qvZ30JiC#iX8fJGlvDK--eKB-2I2o8mDkxqy3-SCXYaDteN1z5sE",
+  SESSION_ID: process.env.SESSION_ID || "Paste Your Session ID",
 
   // ===============================
   // 🤖 BOT MODE SYSTEM
