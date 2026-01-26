@@ -78,7 +78,7 @@
     <a href="https://wa.me/message/XQZHYHBQ3E47I1">
         <img src="https://img.shields.io/badge/WhatsApp-Chat%20Me-25D366?style=flat-square&logo=whatsapp&logoColor=white">
     </a>
-    <a href="https://whatsapp.com/channel/0029Vb65oPr4dTnAzAsztH0Z">
+    <a href="https://whatsapp.com/channel/0029VbC5zjdAojYzyAJS7U2S">
         <img src="https://img.shields.io/badge/Channel-Join%20Now-0078FF?style=flat-square&logo=telegram&logoColor=white">
     </a>
     <br><br>
