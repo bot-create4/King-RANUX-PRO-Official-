@@ -15,7 +15,7 @@
 <!-- BADGES -->
 <p align="center">
   <img src="https://img.shields.io/badge/VERSION-2.0.0-FF4500?style=for-the-badge&logo=git&logoColor=white&labelColor=1a1a1a">
-  <img src="https://img.shields.io/badge/CREATOR-MR.RANSARA-FFD700?style=for-the-badge&logo=visualstudiocode&logoColor=black&labelColor=1a1a1a">
+  <img src="https://img.shields.io/badge/CREATOR-A.M.RANSARA-FFD700?style=for-the-badge&logo=visualstudiocode&logoColor=black&labelColor=1a1a1a">
   <img src="https://img.shields.io/badge/STATUS-ONLINE-00FF88?style=for-the-badge&logo=statuspage&logoColor=black&labelColor=1a1a1a">
 </p>
 
@@ -29,7 +29,7 @@
 ## 🚀 **DEPLOYMENT CENTER**
 *Tap the buttons below to start the magic*
 
-<a href="https://king-ranux-pair-web.onrender.com">
+<a href="https://king-ranux-pro-main-web.vercel.app">
 <img src="https://img.shields.io/badge/📱%20GET%20PAIRING%20CODE%20NOW-FFD700?style=for-the-badge&logo=whatsapp&logoColor=black&labelColor=black&logoWidth=25" height="50">
 </a>
 
