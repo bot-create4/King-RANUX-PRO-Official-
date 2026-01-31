@@ -6,7 +6,7 @@
 module.exports = {
 
   // 🔐 WhatsApp Session ID
-  SESSION_ID: process.env.SESSION_ID || "G2IgzSBS#L5qenZBHW4FBfWswnlKxE3JJsaIxbcPAykGsaauTZRo",
+  SESSION_ID: process.env.SESSION_ID || "tmoknaRb#DlVcNZFlPqQAIC_CQNttIxqhWTWqtUz2FoUYOI2tToY",
 
   // ===============================
   // 🤖 BOT MODE SYSTEM
