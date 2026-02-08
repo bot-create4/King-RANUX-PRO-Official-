@@ -14,7 +14,7 @@ module.exports = {
   // inbox   = inbox only
   // private = owner + sudo only
   // ===============================
-  MODE: process.env.MODE || "public",
+  MODE: process.env.MODE || "private",
 
   // ===============================
   // 📌 STATUS AUTOMATION
